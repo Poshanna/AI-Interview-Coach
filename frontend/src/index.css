@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: rgb(2 6 23);
+  color: white;
+  min-height: 100vh;
+  font-family: Outfit, Inter, sans-serif;
+}
+
+.glass-panel {
+  @apply bg-slate-900/60 backdrop-blur-md border border-slate-800 shadow-xl;
+}
+
+.glass-card {
+  @apply bg-slate-900/40 backdrop-blur-sm border border-slate-800 transition-all duration-300;
+}
+
+@keyframes wave {
+  0%,100% { transform: scaleY(.3);}
+  50% { transform: scaleY(1);}
+}
+
+.wave-bar{
+  animation: wave 1.2s ease-in-out infinite;
+}
